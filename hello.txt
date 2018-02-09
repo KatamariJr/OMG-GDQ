@@ -1,7 +1,6 @@
 welcome to jeff bezos' funky river rafting
 
 This is a test file! I have made an inital file commit!
-<<<<<<< HEAD
 
 more coomits
 
@@ -18,4 +17,4 @@ HOHOHOHOHOHOOHOHOHOHOHOHOHOOHO
 
 
 
-HOHOHOHOHOHOOHOHOHOHOHOHOHOOHOHOHOHOHOHOHOOHO>>>>>>> master
+HOHOHOHOHOHOOHOHOHOHOHOHOHOOHOHOHOHOHOHOHOOHO
