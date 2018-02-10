@@ -10,13 +10,11 @@ public class WaveControl : MonoBehaviour
     public List<GameObject> activeWaves;
     public int speed;
 
-    //Creates a list for waves to be stored.
     void Start()
     {
         activeWaves = new List<GameObject>();
     }
 
-    //Checks for user input.
 	void Update ()
     {
         if (Input.GetButtonDown("LeftClick"))
@@ -33,43 +31,27 @@ public class WaveControl : MonoBehaviour
             endWave = Camera.main.ScreenToWorldPoint(endWave);
             GameObject wave = CreateWave(startWave, endWave);
         }
-    }
 
-    //Checks for physics 
-    void FixedUpdate()
-    {
-
-        foreach (GameObject w in activeWaves)
+        foreach(GameObject w in activeWaves)
         {
             w.transform.Translate(Vector3.right * Time.deltaTime * speed);
-
-            //if (w.transform.position.x <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.x >= 10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y >= 10)
-            //    Destroy(w);
         }
-
     }
 
-    //Instantiaes a wave prefabricated object.
     GameObject CreateWave(Vector3 start, Vector3 end)
     {
         start.z = 0;
         end.z = 0;
         float deltaX = end.x - start.x;
         float deltaY = end.y - start.y;
+        //Vector2 deltaVector = new Vector2(deltaX, deltaY);
+        //float rotationAngle = Vector2.SignedAngle(deltaVector, Vector2.right);
         float rotationAngle = Mathf.Atan(deltaY / deltaX);
         rotationAngle = rotationAngle * 180 / Mathf.PI;
         if (deltaX < 0)
                rotationAngle += 180;
         //float rotationAngle = Vector2.SignedAngle(start, end);
+        Debug.Log(rotationAngle);
         GameObject wave = Instantiate(waveSprite, start, Quaternion.identity);
         wave.transform.Rotate(0,0,rotationAngle);
         activeWaves.Add(wave);
