@@ -6,7 +6,7 @@ public class WaveControl : MonoBehaviour
 {
     Vector3 start_wave;
     Vector3 end_wave;
-    object wave_sprite;
+    public Object wave_sprite;
 
 	void Update ()
     {
@@ -14,18 +14,23 @@ public class WaveControl : MonoBehaviour
         {
             Debug.Log(Input.mousePosition);
             start_wave = Input.mousePosition;
+            start_wave = Camera.main.ScreenToWorldPoint(start_wave);
         }
 
         if (Input.GetButtonUp("LeftClick"))
         {
             Debug.Log(Input.mousePosition);
             end_wave = Input.mousePosition;
+            end_wave = Camera.main.ScreenToWorldPoint(end_wave);
             CreateWave(start_wave, end_wave);
+
         }
     }
 
     void CreateWave(Vector3 start, Vector3 end)
     {
-        Instantiate(wave_sprite, start_wave, Quaternion.identity);
+        start.z = 0;
+        end.z = 0;
+        Instantiate(wave_sprite, start, Quaternion.identity);
     }
 }
