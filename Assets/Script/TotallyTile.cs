@@ -54,19 +54,22 @@ public class TotallyTile : Tile { //Totally!
         return (int) (Random.value * 3);
     }
 
-    public TotallyTile(int t, int v) :base()
+    public TotallyTile init(int t, int v)
     {
         changeTile( t,v);
+        return this;
     }
 
-    public TotallyTile(int t) :base()
+    public TotallyTile init(int t)
     {
         changeTile(t, tileVariation());
+        return this;
     }
 
-    public TotallyTile() : base()
+    public TotallyTile init()
     {
         changeTile(0, 0);
+        return this;
     }
 
 
