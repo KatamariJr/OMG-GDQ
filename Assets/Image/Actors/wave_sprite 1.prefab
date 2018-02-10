@@ -78,6 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.01}
   serializedVersion: 2
   m_Radius: 0.15
+  m_Radius: 0.49
 --- !u!114 &114223018548586480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMagnitude: 0.0005
+  forceMagnitude: 100
 --- !u!212 &212821680610150122
 SpriteRenderer:
   m_ObjectHideFlags: 1
