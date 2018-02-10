@@ -78,6 +78,7 @@ public class Scrolling : MonoBehaviour {
 
             }
             //t.FloodFill(Vector3Int.zero, new TotallyTile(0,0));
+            t.FloodFill(Vector3Int.zero, tile);
             i++;
         }
 
