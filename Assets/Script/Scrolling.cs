@@ -23,7 +23,10 @@ public class Scrolling : MonoBehaviour {
 	public Tilemap T16;
 	public Tilemap T17;
 	public Tilemap T18;
-	public Tile tile;
+    
+    [SerializeField]
+	public Sprite[] allSprites;
+
 	private Queue <Tilemap> columns;
     
 
@@ -56,7 +59,23 @@ public class Scrolling : MonoBehaviour {
         {
             t.size = new Vector3Int(1, 16, 0);
             t.transform.Translate(new Vector3Int(9-i, -8, 0));
-            t.FloodFill(Vector3Int.zero, tile);
+            for (int j = 0; j < 16; j++)
+            {
+                if (j < 2 || j >13)
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.INLAND));
+                }
+                else if (j == 2 || j == 13)
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.COAST));
+                }
+                else
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.WATER));
+                }
+
+            }
+            //t.FloodFill(Vector3Int.zero, new TotallyTile(0,0));
             i++;
         }
 
@@ -83,6 +102,11 @@ public class Scrolling : MonoBehaviour {
         {
             columns.Enqueue(columns.Dequeue()); //Back to the end of the line!!!
         }
+    }
+
+    public  Sprite[] getSprites()
+    {
+        return allSprites;
     }
 
 }
