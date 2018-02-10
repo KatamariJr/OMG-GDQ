@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Scrolling : MonoBehaviour {
+    public float scrollSpeed;
 	public Tilemap T1;
 	public Tilemap T2;
 	public Tilemap T3;
@@ -24,6 +25,7 @@ public class Scrolling : MonoBehaviour {
 	public Tilemap T18;
 	public Tile tile;
 	private Queue <Tilemap> columns;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +50,7 @@ public class Scrolling : MonoBehaviour {
         columns.Enqueue(T17);
         columns.Enqueue(T18);
 
+
         int i = 0;
         foreach (Tilemap t in columns)
         {
@@ -69,7 +72,7 @@ public class Scrolling : MonoBehaviour {
         bool popQueue = false;
         foreach (Tilemap t in columns)
         {
-            t.transform.Translate(Vector3.left * Time.deltaTime);
+            t.transform.Translate(Vector3.left *scrollSpeed* Time.deltaTime);
             if (t.transform.position.x <= -8)
             {
                 t.transform.Translate(new Vector3(18, 0, 0));
