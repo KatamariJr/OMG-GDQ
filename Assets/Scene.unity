@@ -988,6 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6740d4e497f00c4aab328e4d1b102d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollSpeed: 1
   T1: {fileID: 1312638051}
   T2: {fileID: 745611561}
   T3: {fileID: 1927864834}
@@ -1006,7 +1007,7 @@ MonoBehaviour:
   T16: {fileID: 1648899642}
   T17: {fileID: 322169379}
   T18: {fileID: 560931305}
-  t: {fileID: 11400000, guid: 6cda866fcbf5fb14dbd849d4ba7e7458, type: 2}
+  tile: {fileID: 11400000, guid: 6cda866fcbf5fb14dbd849d4ba7e7458, type: 2}
 --- !u!4 &636650161
 Transform:
   m_ObjectHideFlags: 0
