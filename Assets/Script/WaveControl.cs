@@ -10,13 +10,11 @@ public class WaveControl : MonoBehaviour
     public List<GameObject> activeWaves;
     public int speed;
 
-    //Creates a list for waves to be stored.
     void Start()
     {
         activeWaves = new List<GameObject>();
     }
 
-    //Checks for user input.
 	void Update ()
     {
         if (Input.GetButtonDown("LeftClick"))
@@ -40,32 +38,6 @@ public class WaveControl : MonoBehaviour
         }
     }
 
-    }
-
-    //Checks for physics 
-    void FixedUpdate()
-    {
-
-        foreach (GameObject w in activeWaves)
-        {
-            w.transform.Translate(Vector3.right * Time.deltaTime * speed);
-
-            //if (w.transform.position.x <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.x >= 10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y >= 10)
-            //    Destroy(w);
-        }
-
-    }
-
-    //Instantiaes a wave prefabricated object.
     GameObject CreateWave(Vector3 start, Vector3 end)
     {
         start.z = 0;
