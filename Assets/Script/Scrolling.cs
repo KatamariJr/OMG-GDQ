@@ -73,7 +73,7 @@ public class Scrolling : MonoBehaviour {
                 }
                 else
                 {
-                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.INLAND));
+                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.WATER));
                 }
 
             }
