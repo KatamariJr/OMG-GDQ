@@ -1108,6 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6740d4e497f00c4aab328e4d1b102d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollSpeed: 1
   T1: {fileID: 1312638051}
   T2: {fileID: 745611561}
   T3: {fileID: 1927864834}
@@ -1126,7 +1127,26 @@ MonoBehaviour:
   T16: {fileID: 1648899642}
   T17: {fileID: 322169379}
   T18: {fileID: 560931305}
+<<<<<<< HEAD
   tile: {fileID: 11400000, guid: 6cda866fcbf5fb14dbd849d4ba7e7458, type: 2}
+=======
+  allSprites:
+  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
+  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
+  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+>>>>>>> test
 --- !u!4 &636650161
 Transform:
   m_ObjectHideFlags: 0
@@ -1138,7 +1158,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745611558
 GameObject:
@@ -1822,7 +1842,7 @@ Transform:
   - {fileID: 322169377}
   - {fileID: 560931307}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402873643
 GameObject:
@@ -2036,79 +2056,6 @@ Tilemap:
     e32: 0
     e33: 1
   m_TileRefreshArray: []
---- !u!1 &1712978306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1712978308}
-  - component: {fileID: 1712978307}
-  m_Layer: 0
-  m_Name: New Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1712978307
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1712978306}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 0.9264706, g: 0.013624581, b: 0.013624581, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
---- !u!4 &1712978308
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1712978306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89087236, y: 1.0765649, z: 0.037055798}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923308061
 GameObject:
   m_ObjectHideFlags: 0

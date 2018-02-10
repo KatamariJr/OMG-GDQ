@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Scrolling : MonoBehaviour {
+    public float scrollSpeed;
 	public Tilemap T1;
 	public Tilemap T2;
 	public Tilemap T3;
@@ -22,8 +23,12 @@ public class Scrolling : MonoBehaviour {
 	public Tilemap T16;
 	public Tilemap T17;
 	public Tilemap T18;
-	public Tile tile;
+    
+    [SerializeField]
+	public Sprite[] allSprites;
+
 	private Queue <Tilemap> columns;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -48,12 +53,29 @@ public class Scrolling : MonoBehaviour {
         columns.Enqueue(T17);
         columns.Enqueue(T18);
 
+
         int i = 0;
         foreach (Tilemap t in columns)
         {
             t.size = new Vector3Int(1, 16, 0);
             t.transform.Translate(new Vector3Int(9-i, -8, 0));
-            t.FloodFill(Vector3Int.zero, tile);
+            for (int j = 0; j < 16; j++)
+            {
+                if (j < 2 || j >13)
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.INLAND));
+                }
+                else if (j == 2 || j == 13)
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.COAST));
+                }
+                else
+                {
+                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.WATER));
+                }
+
+            }
+            //t.FloodFill(Vector3Int.zero, new TotallyTile(0,0));
             i++;
         }
 
@@ -69,7 +91,7 @@ public class Scrolling : MonoBehaviour {
         bool popQueue = false;
         foreach (Tilemap t in columns)
         {
-            t.transform.Translate(Vector3.left * Time.deltaTime);
+            t.transform.Translate(Vector3.left *scrollSpeed* Time.deltaTime);
             if (t.transform.position.x <= -8)
             {
                 t.transform.Translate(new Vector3(18, 0, 0));
@@ -80,6 +102,11 @@ public class Scrolling : MonoBehaviour {
         {
             columns.Enqueue(columns.Dequeue()); //Back to the end of the line!!!
         }
+    }
+
+    public  Sprite[] getSprites()
+    {
+        return allSprites;
     }
 
 }
