@@ -21,7 +21,8 @@ public class PushingForce : MonoBehaviour {
             collisionAngle = collisionAngle * 180 / Mathf.PI;
             if (deltaX < 0)
                 collisionAngle += 180;
-            Vector2 forceDirection = new Vector2(collisionAngle * Mathf.Sin(collisionAngle), collisionAngle * Mathf.Cos(collisionAngle));
+            Vector2 forceDirection = new Vector2(Mathf.Cos(collisionAngle), Mathf.Sin(collisionAngle));
+            forceDirection.Normalize();
             //Set the other object's velocity equal to the force of this object and the angle between them
             other.attachedRigidbody.AddForce(forceDirection * forceMagnitude);
         }
