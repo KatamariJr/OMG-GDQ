@@ -1127,9 +1127,7 @@ MonoBehaviour:
   T16: {fileID: 1648899642}
   T17: {fileID: 322169379}
   T18: {fileID: 560931305}
-<<<<<<< HEAD
   tile: {fileID: 11400000, guid: 6cda866fcbf5fb14dbd849d4ba7e7458, type: 2}
-=======
   allSprites:
   - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
   - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
@@ -1146,7 +1144,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
   - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
   - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
->>>>>>> test
   tile: {fileID: 11400000, guid: 6cda866fcbf5fb14dbd849d4ba7e7458, type: 2}
 --- !u!4 &636650161
 Transform:
