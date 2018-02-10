@@ -63,19 +63,22 @@ public class Scrolling : MonoBehaviour {
             {
                 if (j < 2 || j >13)
                 {
-                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.INLAND));
+
+                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.INLAND));
                 }
                 else if (j == 2 || j == 13)
                 {
-                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.COAST));
+
+                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.COAST));
                 }
                 else
                 {
-                    t.SetTile(new Vector3Int(0, j, 0), new TotallyTile(TotallyTile.WATER));
+                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.WATER));
                 }
 
             }
             //t.FloodFill(Vector3Int.zero, new TotallyTile(0,0));
+            //t.FloodFill(Vector3Int.zero, tile);
             i++;
         }
 
