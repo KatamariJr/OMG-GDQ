@@ -73,10 +73,15 @@ public class Scrolling : MonoBehaviour {
 
                     t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.INLAND));
                 }
-                else if (j == 2 || j == 13)
+                else if (j == 13)
                 {
 
                     t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.COAST));
+                }
+                else if (j == 2)
+                {
+
+                    t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.COAST_INV));
                 }
                 else
                 {
@@ -125,7 +130,7 @@ public class Scrolling : MonoBehaviour {
 
     public void loadAllSprites()
     {
-        everySprite = new Sprite[21][];
+        everySprite = new Sprite[24][];
         string path = "Image/World/";
         everySprite[0] = Resources.LoadAll<Sprite>(path+"tileset_water_base");
         everySprite[1] = Resources.LoadAll<Sprite>(path + "tileset_water_base");
@@ -148,6 +153,9 @@ public class Scrolling : MonoBehaviour {
         everySprite[18] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
         everySprite[19] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
         everySprite[20] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
+        everySprite[21] = Resources.LoadAll<Sprite>(path + "tileset_coast_1_inv");
+        everySprite[22] = Resources.LoadAll<Sprite>(path + "tileset_coast_2_inv");
+        everySprite[23] = Resources.LoadAll<Sprite>(path + "tileset_coast_3_inv");
 
     }
 

@@ -13,6 +13,7 @@ public class TotallyTile : Tile { //Totally!
     public const int COAST_DD = 4;
     public const int COAST_L_CR = 5;
     public const int COAST_R_CR = 6;
+    public const int COAST_INV = 7;
 
     private int terrainType;
     private int variation;
