@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GlobalInputListener : MonoBehaviour
 {
-    bool isPaused;
-    bool isStarted;
+    bool gamePaused;
+    bool gameStarted;
     CanvasGroup pauseCanvas;
     CanvasGroup menuCanvas;
 
@@ -19,8 +19,8 @@ public class GlobalInputListener : MonoBehaviour
         Time.timeScale = 0;
         pauseCanvas.interactable = false;
         pauseCanvas.alpha = 0;
-        isPaused = true;
-        isStarted = false;
+        gamePaused = true;
+        gameStarted = false;
     }
 
     // Update is called once per frame
@@ -36,12 +36,12 @@ public class GlobalInputListener : MonoBehaviour
         menuCanvas.interactable = false;
         menuCanvas.alpha = 0;
         unpauseGame();
-        isStarted = true;
+        gameStarted = true;
     }
 
     public void togglePause()
     {
-        if (isPaused)
+        if (gamePaused)
             unpauseGame();
         else
             pauseGame();
@@ -54,7 +54,7 @@ public class GlobalInputListener : MonoBehaviour
         pauseCanvas.interactable = true;
         //pause game
         Time.timeScale = 0;
-        isPaused = true;
+        gamePaused = true;
     }
 
     public void unpauseGame()
@@ -64,7 +64,7 @@ public class GlobalInputListener : MonoBehaviour
         pauseCanvas.interactable = false;
         //unpause game
         Time.timeScale = 1;
-        isPaused = false;
+        gamePaused = false;
     }
 
     public void exitGame()
@@ -76,6 +76,16 @@ public class GlobalInputListener : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    public bool isPaused()
+    {
+        return gamePaused;
+    }
+
+    public bool isStarted()
+    {
+        return gameStarted;
     }
 
 }
