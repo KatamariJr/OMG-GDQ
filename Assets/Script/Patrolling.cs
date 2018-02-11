@@ -15,7 +15,7 @@ public class Patrolling : MonoBehaviour {
     void Start()
     {
         thisPos = this.gameObject.transform.position;
-        int dir = Random.Range(0, 1);
+        int dir = Random.Range(0, 2);
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class Patrolling : MonoBehaviour {
                 dir = 1;
             }
         }
-        else
+        else if (dir == 1)
         {
             this.gameObject.transform.Translate(((Vector2.left * scrollSpeed) + (Vector2.down * speed)/2) * Time.deltaTime);
             thisPos = this.gameObject.transform.position;

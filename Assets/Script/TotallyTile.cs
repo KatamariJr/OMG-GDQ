@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEditor;
+//using UnityEditor;
 
 public class TotallyTile : Tile { //Totally!
 
@@ -18,18 +18,18 @@ public class TotallyTile : Tile { //Totally!
     private int variation;
     private bool flipped;
 
-#if UNITY_EDITOR
-       [MenuItem("Assets/Create/Tiles/TotallyTile")]
-       public static void CreateTotallyTile()
-    {
-        string path = EditorUtility.SaveFilePanelInProject("Save Totally Tile", "New Totally Tile", "Asset", "Save Totally Tile", "Assets");
-        if (path == "")
-        {
-            return;
-        }
-        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<TotallyTile>(), path);
-    }
-#endif
+//#if UNITY_EDITOR
+//       [MenuItem("Assets/Create/Tiles/TotallyTile")]
+//       public static void CreateTotallyTile()
+//    {
+//        string path = EditorUtility.SaveFilePanelInProject("Save Totally Tile", "New Totally Tile", "Asset", "Save Totally Tile", "Assets");
+//        if (path == "")
+//        {
+//            return;
+//        }
+//        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<TotallyTile>(), path);
+//    }
+//#endif
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {
         Scrolling s = GameObject.Find("World").GetComponent(typeof(Scrolling)) as Scrolling;
