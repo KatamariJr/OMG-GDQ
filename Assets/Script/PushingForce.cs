@@ -17,7 +17,7 @@ public class PushingForce : MonoBehaviour {
             Vector2 delta = other.gameObject.transform.position - this.gameObject.transform.position;
             delta.Normalize();
             //Set the other object's velocity equal to the force of this object and the angle between them
-            other.attachedRigidbody.AddForce(forceDirection * forceMagnitude);
+            other.attachedRigidbody.AddForce(delta * forceMagnitude);
         }
     }
 
