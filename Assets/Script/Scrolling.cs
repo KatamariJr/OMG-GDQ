@@ -35,6 +35,11 @@ public class Scrolling : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         loadAllSprites();
+        init();
+	}
+
+    public void init()
+    {
         columns = new Queue<Tilemap>(18);
         columns.Enqueue(T1);
         columns.Enqueue(T2);
@@ -55,16 +60,15 @@ public class Scrolling : MonoBehaviour {
         columns.Enqueue(T17);
         columns.Enqueue(T18);
 
-
         int i = 0;
         foreach (Tilemap t in columns)
         {
             t.size = new Vector3Int(1, 16, 0);
-            t.transform.Translate(new Vector3Int(9-i, -8, 0));
+            t.transform.position = (new Vector3Int(9 - i, -8, 0));
             t.animationFrameRate = 10;
             for (int j = 0; j < 16; j++)
             {
-                if (j < 2 || j >13)
+                if (j < 2 || j > 13)
                 {
 
                     t.SetTile(new Vector3Int(0, j, 0), TotallyTile.CreateInstance<TotallyTile>().init(TotallyTile.INLAND));
@@ -84,11 +88,10 @@ public class Scrolling : MonoBehaviour {
             //t.FloodFill(Vector3Int.zero, tile);
             i++;
         }
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         ScrollTiles();
 	}
 
@@ -147,5 +150,7 @@ public class Scrolling : MonoBehaviour {
         everySprite[20] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
 
     }
+
+
 
 }
