@@ -1,14 +1,18 @@
 fileFormatVersion: 2
-guid: 7ee55e05bb577fd4996ff1d338ae81d4
-timeCreated: 1518298945
+guid: e930d59d7b5d15941b453f16c99be4c8
+timeCreated: 1518324214
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sprite_lilboatie_up_0
-    21300002: sprite_lilboatie_up_1
-    21300004: sprite_lilboatie_up_2
-    21300006: sprite_lilboatie_up_3
-    21300008: sprite_lilboatie_up_4
+    21300000: tileset_DD_2_inv_0
+    21300002: tileset_DD_2_inv_1
+    21300004: tileset_DD_2_inv_2
+    21300006: tileset_DD_2_inv_3
+    21300008: tileset_DD_2_inv_4
+    21300010: tileset_DD_2_inv_5
+    21300012: tileset_DD_2_inv_6
+    21300014: tileset_DD_2_inv_7
+    21300016: tileset_DD_2_inv_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -95,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_lilboatie_up_0
+      name: tileset_DD_2_inv_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 13
-        width: 24
-        height: 24
+        x: 0
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,13 +113,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_lilboatie_up_1
+      name: tileset_DD_2_inv_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 13
-        width: 24
-        height: 24
+        x: 50
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,13 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_lilboatie_up_2
+      name: tileset_DD_2_inv_2
       rect:
         serializedVersion: 2
-        x: 113
-        y: 13
-        width: 24
-        height: 24
+        x: 100
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,13 +141,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_lilboatie_up_3
+      name: tileset_DD_2_inv_3
       rect:
         serializedVersion: 2
-        x: 163
-        y: 13
-        width: 24
-        height: 24
+        x: 150
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,13 +155,69 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sprite_lilboatie_up_4
+      name: tileset_DD_2_inv_4
       rect:
         serializedVersion: 2
-        x: 213
-        y: 13
-        width: 24
-        height: 24
+        x: 200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset_DD_2_inv_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset_DD_2_inv_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset_DD_2_inv_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset_DD_2_inv_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
