@@ -40,7 +40,6 @@ public class WaveControl : MonoBehaviour
         }
     }
 
-    }
 
     //Checks for physics 
     void FixedUpdate()
