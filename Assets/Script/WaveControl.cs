@@ -37,7 +37,10 @@ public class WaveControl : MonoBehaviour
 
         foreach(GameObject w in activeWaves)
         {
-            w.transform.Translate(Vector3.right * Time.deltaTime * speed);
+            if (w == null)
+            {
+                activeWaves.Remove(w);
+            }
         }
     }
 
@@ -77,6 +80,7 @@ public class WaveControl : MonoBehaviour
         GameObject wave = Instantiate(waveSprite, start, Quaternion.identity);
         wave.transform.Rotate(0,0,rotationAngle);
         activeWaves.Add(wave);
+        Destroy(wave, 0.9f);
         return wave;
     }
 }
