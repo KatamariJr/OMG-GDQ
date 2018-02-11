@@ -10,6 +10,7 @@ public class WaveControl : MonoBehaviour
     public GameObject waveSprite;
     public int speed;
     GlobalInputListener world;
+    bool waveBeingMade = false;
 
     private List<GameObject> activeWaves;
 
@@ -23,21 +24,23 @@ public class WaveControl : MonoBehaviour
     //Checks for user input.
 	void Update ()
     {
-        if (!world.isPaused())
+        if (!GameObject.Find("World").GetComponent<GlobalInputListener>().menuShowing())
         {
+            
             if (Input.GetButtonDown("LeftClick"))
             {
-
+                waveBeingMade = true;
                 startWave = Input.mousePosition;
                 startWave = Camera.main.ScreenToWorldPoint(startWave);
             }
 
-            if (Input.GetButtonUp("LeftClick"))
+            if (Input.GetButtonUp("LeftClick") && waveBeingMade)
             {
 
                 endWave = Input.mousePosition;
                 endWave = Camera.main.ScreenToWorldPoint(endWave);
                 GameObject wave = CreateWave(startWave, endWave);
+                waveBeingMade = false;
             }
         }
         foreach(GameObject w in activeWaves)

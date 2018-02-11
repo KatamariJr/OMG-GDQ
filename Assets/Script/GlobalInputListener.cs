@@ -32,6 +32,13 @@ public class GlobalInputListener : MonoBehaviour
         }
     }
 
+    public bool menuShowing()
+    {
+        if (pauseCanvas.interactable || menuCanvas.interactable || GameObject.Find("LoseCanvas").GetComponent<CanvasGroup>().interactable)
+            return true;
+        return false;
+    }
+
     public void startGame(){
         menuCanvas.interactable = false;
         menuCanvas.alpha = 0;
