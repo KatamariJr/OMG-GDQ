@@ -29,8 +29,9 @@ public class Spawner : MonoBehaviour
         {
             if ((e.transform.position.x <= -10) || (e.transform.position.y <= -10) || (e.transform.position.y >= 10))
             {
-                Destroy(e);
                 activeEnemies.Remove(e);
+                Destroy(e);
+                
             }
         }
     }
@@ -41,17 +42,21 @@ public class Spawner : MonoBehaviour
         int yPos = Random.Range(lowerBound, upperBound);
         Vector2 spawnPoint = new Vector2(xPos, yPos);
 
-        if (type == 1)
+        switch (type)
         {
-            activeEnemies.Add(Instantiate(Enemy1, spawnPoint, Quaternion.identity));
-        }
-        else if (type == 2)
-        {
-            activeEnemies.Add(Instantiate(Enemy2, spawnPoint, Quaternion.identity));
-        }
-        else if (type == 3)
-        {
-            activeEnemies.Add(Instantiate(Enemy3, spawnPoint, Quaternion.identity));
+
+
+            case 1:
+                activeEnemies.Add(Instantiate(Enemy1, spawnPoint, Quaternion.identity));
+                break;
+
+            case 2:
+                activeEnemies.Add(Instantiate(Enemy2, spawnPoint, Quaternion.identity));
+                break;
+
+            case 3:
+                activeEnemies.Add(Instantiate(Enemy3, spawnPoint, Quaternion.identity));
+                break;
         }
     }
 
