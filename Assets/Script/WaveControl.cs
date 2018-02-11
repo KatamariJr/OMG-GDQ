@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class WaveControl : MonoBehaviour
 {
+
     Vector3 startWave;
     Vector3 endWave;
     public GameObject waveSprite;
     public List<GameObject> activeWaves;
     public int speed;
+    GlobalInputListener world;
 
     void Start()
     {
         activeWaves = new List<GameObject>();
+        world = GameObject.Find("World").GetComponent<GlobalInputListener>();
     }
 
 	void Update ()
     {
-        if (Input.GetButtonDown("LeftClick"))
+        if (!world.isPaused())
         {
-            
-            startWave = Input.mousePosition;
-            startWave = Camera.main.ScreenToWorldPoint(startWave);
-        }
+            if (Input.GetButtonDown("LeftClick"))
+            {
 
-        if (Input.GetButtonUp("LeftClick"))
-        {
-           
-            endWave = Input.mousePosition;
-            endWave = Camera.main.ScreenToWorldPoint(endWave);
-            GameObject wave = CreateWave(startWave, endWave);
-        }
+                startWave = Input.mousePosition;
+                startWave = Camera.main.ScreenToWorldPoint(startWave);
+            }
 
+            if (Input.GetButtonUp("LeftClick"))
+            {
+
+                endWave = Input.mousePosition;
+                endWave = Camera.main.ScreenToWorldPoint(endWave);
+                GameObject wave = CreateWave(startWave, endWave);
+            }
+        }
         foreach(GameObject w in activeWaves)
         {
             w.transform.Translate(Vector3.right * Time.deltaTime * speed);
