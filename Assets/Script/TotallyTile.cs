@@ -11,9 +11,12 @@ public class TotallyTile : Tile { //Totally!
     public const int COAST = 2;
     public const int COAST_UD = 3;
     public const int COAST_DD = 4;
+    public const int COAST_L_CR = 5;
+    public const int COAST_R_CR = 6;
 
     private int terrainType;
     private int variation;
+    private bool flipped;
 
 #if UNITY_EDITOR
        [MenuItem("Assets/Create/Tiles/TotallyTile")]
@@ -30,10 +33,27 @@ public class TotallyTile : Tile { //Totally!
     public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
     {
         Scrolling s = GameObject.Find("World").GetComponent(typeof(Scrolling)) as Scrolling;
-        int index = (terrainType * 3) + variation;
+        int index = (terrainType * 3) + (variation);
+        if (position.y >0)
+        {
+            
+        }
         tileData.sprite = s.getSprites()[index];
+
     }
 
+    public override bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData)
+    {
+       if (terrainType == INLAND || terrainType == WATER)
+        {
+            return false;
+        }
+        Scrolling s = GameObject.Find("World").GetComponent(typeof(Scrolling)) as Scrolling;
+        int index = (terrainType * 3) + (variation - 1);
+        tileAnimationData.animatedSprites = s.getEverySprite(index);
+        tileAnimationData.animationSpeed = 1f;
+        return true;
+    }
     public override void RefreshTile(Vector3Int position, ITilemap tilemap)
     {
         base.RefreshTile(position, tilemap);
@@ -51,7 +71,12 @@ public class TotallyTile : Tile { //Totally!
 
     public int tileVariation()  //1 to 3
     {
-        return (int) (Random.value * 3);
+        return (int) (Random.value * 2)+1;
+    }
+
+    public void flip()
+    {
+        this.flipped = true;
     }
 
     public TotallyTile init(int t, int v)
