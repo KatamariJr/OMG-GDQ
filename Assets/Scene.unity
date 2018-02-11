@@ -944,7 +944,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563668946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1128,21 +1128,27 @@ MonoBehaviour:
   T17: {fileID: 322169379}
   T18: {fileID: 560931305}
   allSprites:
-  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
-  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
-  - {fileID: 21300000, guid: 4b01930bd8df2dc44aa66a15d5349ed2, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
-  - {fileID: 21300000, guid: ab32b4e93604646499b4cd6602a23989, type: 3}
+  - {fileID: 21300000, guid: e8d037f0859051e428d0902bb57adcfd, type: 3}
+  - {fileID: 21300000, guid: e8d037f0859051e428d0902bb57adcfd, type: 3}
+  - {fileID: 21300000, guid: e8d037f0859051e428d0902bb57adcfd, type: 3}
+  - {fileID: 21300000, guid: f841c8b65b347ca468ab21bf0a1d9ac8, type: 3}
+  - {fileID: 21300000, guid: 60ca6dae51f7fe24095af40fb6b49577, type: 3}
+  - {fileID: 21300000, guid: c6f477acb0b8fb44588b6180eeee027e, type: 3}
+  - {fileID: 21300000, guid: f10941b1db5132c48a365f6868f4ee14, type: 3}
+  - {fileID: 21300000, guid: 9ced142a3e0de13498d109d7a4432066, type: 3}
+  - {fileID: 21300000, guid: 9a32f40f66adfb144a9033f6effbb6ca, type: 3}
+  - {fileID: 21300000, guid: 1dd35b0393d0e4445819adbc65fa2235, type: 3}
+  - {fileID: 21300000, guid: 1dd35b0393d0e4445819adbc65fa2235, type: 3}
+  - {fileID: 21300000, guid: 7057671f9ac8ad443823fe770fc95a7c, type: 3}
+  - {fileID: 21300000, guid: 4110b193a39f78b409b870898ed3c7d4, type: 3}
+  - {fileID: 21300000, guid: 4110b193a39f78b409b870898ed3c7d4, type: 3}
+  - {fileID: 21300000, guid: d58acc2bf8d87e54d9e9f851651531ce, type: 3}
+  - {fileID: 21300000, guid: 080fdb5131683614c8d97fae39aca63e, type: 3}
+  - {fileID: 21300000, guid: 080fdb5131683614c8d97fae39aca63e, type: 3}
+  - {fileID: 21300000, guid: 080fdb5131683614c8d97fae39aca63e, type: 3}
+  - {fileID: 21300000, guid: 87692621e21f1d542b4e5783641215de, type: 3}
+  - {fileID: 21300000, guid: 87692621e21f1d542b4e5783641215de, type: 3}
+  - {fileID: 21300000, guid: 87692621e21f1d542b4e5783641215de, type: 3}
 --- !u!4 &636650161
 Transform:
   m_ObjectHideFlags: 0
@@ -1521,7 +1527,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.47337
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1550,7 +1556,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198079232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 1, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

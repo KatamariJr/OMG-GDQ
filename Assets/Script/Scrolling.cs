@@ -27,12 +27,14 @@ public class Scrolling : MonoBehaviour {
     [SerializeField]
 	public Sprite[] allSprites;
 
+    private Sprite[][] everySprite;
+
 	private Queue <Tilemap> columns;
     
 
 	// Use this for initialization
 	void Start () {
-
+        loadAllSprites();
         columns = new Queue<Tilemap>(18);
         columns.Enqueue(T1);
         columns.Enqueue(T2);
@@ -59,6 +61,7 @@ public class Scrolling : MonoBehaviour {
         {
             t.size = new Vector3Int(1, 16, 0);
             t.transform.Translate(new Vector3Int(9-i, -8, 0));
+            t.animationFrameRate = 10;
             for (int j = 0; j < 16; j++)
             {
                 if (j < 2 || j >13)
@@ -110,6 +113,39 @@ public class Scrolling : MonoBehaviour {
     public  Sprite[] getSprites()
     {
         return allSprites;
+    }
+
+    public Sprite[] getEverySprite(int index)
+    {
+        return everySprite[index];
+    }
+
+    public void loadAllSprites()
+    {
+        everySprite = new Sprite[21][];
+        string path = "Image/World/";
+        everySprite[0] = Resources.LoadAll<Sprite>(path+"tileset_water_base");
+        everySprite[1] = Resources.LoadAll<Sprite>(path + "tileset_water_base");
+        everySprite[2] = Resources.LoadAll<Sprite>(path + "tileset_water_base");
+        everySprite[3] = Resources.LoadAll<Sprite>(path + "tileset_inland_1");
+        everySprite[4] = Resources.LoadAll<Sprite>(path + "tileset_inland_2");
+        everySprite[5] = Resources.LoadAll<Sprite>(path + "tileset_inland_3");
+        everySprite[6] = Resources.LoadAll<Sprite>(path + "tileset_coast_1");
+        everySprite[7] = Resources.LoadAll<Sprite>(path + "tileset_coast_2");
+        everySprite[8] = Resources.LoadAll<Sprite>(path + "tileset_coast_3");
+        everySprite[9] = Resources.LoadAll<Sprite>(path + "tileset_UD_1");
+        everySprite[10] = Resources.LoadAll<Sprite>(path + "tileset_UD_2");
+        everySprite[11] = Resources.LoadAll<Sprite>(path+"tileset_UD_3");
+        everySprite[12] = Resources.LoadAll<Sprite>(path+"tileset_DD_1");
+        everySprite[13] = Resources.LoadAll<Sprite>(path + "tileset_DD_2");
+        everySprite[14] = Resources.LoadAll<Sprite>(path + "tileset_DD_3");
+        everySprite[15] = Resources.LoadAll<Sprite>(path + "tileset_corner_L");
+        everySprite[16] = Resources.LoadAll<Sprite>(path + "tileset_corner_L");
+        everySprite[17] = Resources.LoadAll<Sprite>(path + "tileset_corner_L");
+        everySprite[18] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
+        everySprite[19] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
+        everySprite[20] = Resources.LoadAll<Sprite>(path + "tileset_corner_R");
+
     }
 
 }

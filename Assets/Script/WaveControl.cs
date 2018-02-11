@@ -38,6 +38,17 @@ public class WaveControl : MonoBehaviour
         }
     }
 
+
+    //Checks for physics 
+    void FixedUpdate()
+    {
+
+        foreach(GameObject w in activeWaves)
+        {
+            w.transform.Translate(Vector3.right * Time.deltaTime * speed);
+        }
+    }
+
     GameObject CreateWave(Vector3 start, Vector3 end)
     {
         start.z = 0;
