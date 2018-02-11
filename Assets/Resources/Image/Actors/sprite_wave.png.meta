@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: 98837fb3156e62141a19240f05bbf271
-timeCreated: 1518298945
+guid: edac31f97dfc7de45904c8f7168e130a
+timeCreated: 1518318370
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tileset_inland_0
-    21300002: tileset_inland_1
-    21300004: tileset_inland_2
-    21300006: tileset_inland_3
-    21300008: tileset_inland_4
+    21300000: sprite_wave_0
+    21300002: sprite_wave_1
+    21300004: sprite_wave_2
+    21300006: sprite_wave_3
+    21300008: sprite_wave_4
+    21300010: sprite_wave_5
+    21300012: sprite_wave_6
+    21300014: sprite_wave_7
+    21300016: sprite_wave_8
+    21300018: sprite_wave_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -95,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset_inland_0
+      name: sprite_wave_0
       rect:
         serializedVersion: 2
         x: 0
@@ -109,7 +114,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_inland_1
+      name: sprite_wave_1
       rect:
         serializedVersion: 2
         x: 50
@@ -123,7 +128,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_inland_2
+      name: sprite_wave_2
       rect:
         serializedVersion: 2
         x: 100
@@ -137,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_inland_3
+      name: sprite_wave_3
       rect:
         serializedVersion: 2
         x: 150
@@ -151,10 +156,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_inland_4
+      name: sprite_wave_4
       rect:
         serializedVersion: 2
         x: 200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprite_wave_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprite_wave_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprite_wave_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprite_wave_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprite_wave_9
+      rect:
+        serializedVersion: 2
+        x: 450
         y: 0
         width: 50
         height: 50
