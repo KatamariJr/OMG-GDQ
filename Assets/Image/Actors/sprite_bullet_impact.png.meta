@@ -3,7 +3,11 @@ guid: 1d0daca5856b0934c8582c7b49d2466f
 timeCreated: 1518307531
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: sprite_bullet_impact_0
+    21300002: sprite_bullet_impact_1
+    21300004: sprite_bullet_impact_2
+    21300006: sprite_bullet_impact_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,13 +44,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +70,117 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprite_bullet_impact_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 3}
+        - {x: -8, y: -2}
+        - {x: -6, y: -4}
+        - {x: -5, y: -4}
+        - {x: -2, y: -1}
+        - {x: -2, y: 1}
+        - {x: -5, y: 4}
+      physicsShape: []
+      tessellationDetail: 0.61
+    - serializedVersion: 2
+      name: sprite_bullet_impact_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -4}
+        - {x: -7, y: -6}
+        - {x: -5, y: -6}
+        - {x: -1, y: -2}
+        - {x: -1, y: 2}
+        - {x: -5, y: 6}
+      physicsShape: []
+      tessellationDetail: 0.65
+    - serializedVersion: 2
+      name: sprite_bullet_impact_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -4}
+        - {x: -4, y: -7}
+        - {x: 0, y: -6}
+        - {x: 0, y: 4}
+        - {x: -3, y: 7}
+      physicsShape: []
+      tessellationDetail: 0.74
+    - serializedVersion: 2
+      name: sprite_bullet_impact_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 3}
+        - {x: 0, y: 9}
+        - {x: -2, y: 9}
+        - {x: -7, y: 4}
+        - {x: -7, y: 3}
+        - {x: -4, y: 0}
+        - {x: -7, y: -3}
+        - {x: -7, y: -4}
+        - {x: -2, y: -9}
+        - {x: 1, y: -7}
+        - {x: 0, y: -5}
+        - {x: 3, y: -3}
+      physicsShape: []
+      tessellationDetail: 0.81
     outline: []
     physicsShape: []
   spritePackingTag: 
