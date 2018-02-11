@@ -30,6 +30,8 @@ public class Scrolling : MonoBehaviour {
     private Sprite[][] everySprite;
 
 	private Queue <Tilemap> columns;
+
+    private Tilemap lastGeneratedColumn;
     
 
 	// Use this for initialization
@@ -55,7 +57,7 @@ public class Scrolling : MonoBehaviour {
         columns.Enqueue(T17);
         columns.Enqueue(T18);
 
-
+        lastGeneratedColumn = T18;
         int i = 0;
         foreach (Tilemap t in columns)
         {
@@ -106,8 +108,23 @@ public class Scrolling : MonoBehaviour {
         }
         if (popQueue)
         {
-            columns.Enqueue(columns.Dequeue()); //Back to the end of the line!!!
+            //set new tiles in column and add it to the end of the queue
+
+            lastGeneratedColumn = resetTiles(columns.Dequeue());
+
+            columns.Enqueue(lastGeneratedColumn); //Back to the end of the line!!!
         }
+    }
+
+    private Tilemap resetTiles(Tilemap map)
+    {
+
+
+
+
+
+
+        return map;
     }
 
     public  Sprite[] getSprites()
