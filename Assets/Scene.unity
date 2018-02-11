@@ -2426,7 +2426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSprite: {fileID: 1990857699186994, guid: 2749cb5e60900b1458fe50e1b423dd79, type: 2}
-  speed: 1
+  speed: 2
 --- !u!95 &1198079238
 Animator:
   serializedVersion: 3
