@@ -7,8 +7,9 @@ public class WaveControl : MonoBehaviour
     Vector3 startWave;
     Vector3 endWave;
     public GameObject waveSprite;
-    public List<GameObject> activeWaves;
     public int speed;
+
+    private List<GameObject> activeWaves;
 
     //Creates a list for waves to be stored.
     void Start()
@@ -49,17 +50,12 @@ public class WaveControl : MonoBehaviour
         {
             w.transform.Translate(Vector3.right * Time.deltaTime * speed);
 
-            //if (w.transform.position.x <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.x >= 10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y <= -10)
-            //    Destroy(w);
-            //else if
-            //    (w.transform.position.y >= 10)
-            //    Destroy(w);
+            if ((w.transform.position.x <= -10) || (w.transform.position.x >= 10) || (w.transform.position.y <= -10) || (w.transform.position.y >= 10))
+            {
+                Destroy(w);
+                activeWaves.Remove(w);
+            }
+
         }
 
     }
@@ -78,7 +74,6 @@ public class WaveControl : MonoBehaviour
         if (deltaX < 0)
                rotationAngle += 180;
         //float rotationAngle = Vector2.SignedAngle(start, end);
-        Debug.Log(rotationAngle);
         GameObject wave = Instantiate(waveSprite, start, Quaternion.identity);
         wave.transform.Rotate(0,0,rotationAngle);
         activeWaves.Add(wave);

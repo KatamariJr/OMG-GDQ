@@ -15,7 +15,7 @@ public class Patrolling : MonoBehaviour {
     void Start()
     {
         thisPos = this.gameObject.transform.position;
-        int dir = Random.Range(0, 2);
+        dir = Random.Range(0, 2);
     }
 
     // Update is called once per frame

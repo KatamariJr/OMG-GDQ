@@ -14,9 +14,25 @@ public class Spawner : MonoBehaviour
     public float spawnDelay;
     public int xPos;
 
+    private List<GameObject> activeEnemies;
+
+
+
     void Start()
     {
         InvokeRepeating("spawnEnemies", spawnDelay, spawnDelay);
+    }
+
+    void Update()
+    {
+        foreach (GameObject e in activeEnemies)
+        {
+            if ((e.transform.position.x <= -10) || (e.transform.position.y <= -10) || (e.transform.position.y >= 10))
+            {
+                Destroy(e);
+                activeEnemies.Remove(e);
+            }
+        }
     }
 
     void spawnEnemies()
@@ -27,15 +43,24 @@ public class Spawner : MonoBehaviour
 
         if (type == 1)
         {
-            Instantiate(Enemy1, spawnPoint, Quaternion.identity);
+            activeEnemies.Add(Instantiate(Enemy1, spawnPoint, Quaternion.identity));
         }
         else if (type == 2)
         {
-            Instantiate(Enemy2, spawnPoint, Quaternion.identity);
+            activeEnemies.Add(Instantiate(Enemy2, spawnPoint, Quaternion.identity));
         }
         else if (type == 3)
         {
-            Instantiate(Enemy3, spawnPoint, Quaternion.identity);
+            activeEnemies.Add(Instantiate(Enemy3, spawnPoint, Quaternion.identity));
         }
+    }
+
+    public void clearEnemies()
+    {
+        foreach (GameObject e in activeEnemies)
+        {
+                Destroy(e);
+        }
+        activeEnemies.Clear();
     }
 }
