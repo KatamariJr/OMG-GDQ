@@ -1306,6 +1306,7 @@ MonoBehaviour:
   Enemy1: {fileID: 1547179686633814, guid: 8eee3ba5b345a2d4f9a14818222c4b9d, type: 2}
   Enemy2: {fileID: 1823966303956108, guid: bc8f6300c211b0f458dac820a28c1c60, type: 2}
   Enemy3: {fileID: 1282970584824166, guid: 9a632f36735e581499ec00f703804a47, type: 2}
+  Enemy4: {fileID: 1414983080339314, guid: 6e67abbd9ff01ac4cb0217e0dca11207, type: 2}
   maxEnemyCount: 10
   upperBound: 4
   lowerBound: -4
@@ -2408,12 +2409,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: -2.98
+  far clip plane: 997.83
   field of view: 60
   orthographic: 1
   orthographic size: 8
-  m_Depth: 5.72
+  m_Depth: 7.46
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

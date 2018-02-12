@@ -8,6 +8,10 @@ public class Spawner : MonoBehaviour
     public GameObject Enemy1;
     public GameObject Enemy2;
     public GameObject Enemy3;
+    public GameObject Enemy4;
+    public GameObject Enemy5;
+    public GameObject Enemy6;
+    public GameObject Enemy7;
     public int maxEnemyCount;
     public int upperBound;
     public int lowerBound;
@@ -32,14 +36,13 @@ public class Spawner : MonoBehaviour
             {
                 activeEnemies.Remove(e);
                 Destroy(e);
-                
             }
         }
     }
 
     void spawnEnemies()
     {
-        int type = Random.Range(1, 4);
+        int type = Random.Range(1, 8);
         int yPos = Random.Range(lowerBound, upperBound);
         Vector2 spawnPoint = new Vector2(xPos, yPos);
 
@@ -57,6 +60,20 @@ public class Spawner : MonoBehaviour
 
             case 3:
                 activeEnemies.Add(Instantiate(Enemy3, spawnPoint, Quaternion.identity));
+                break;
+            case 4:
+                activeEnemies.Add(Instantiate(Enemy4, spawnPoint, Quaternion.identity));
+                break;
+            case 5:
+                activeEnemies.Add(Instantiate(Enemy5, spawnPoint, Quaternion.identity));
+                break;
+            case 6:
+                activeEnemies.Add(Instantiate(Enemy6, spawnPoint, Quaternion.identity));
+                break;
+            case 7:
+                activeEnemies.Add(Instantiate(Enemy7, spawnPoint, Quaternion.identity));
+                break;
+            default:
                 break;
         }
 

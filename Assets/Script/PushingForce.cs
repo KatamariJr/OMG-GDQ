@@ -5,6 +5,7 @@ using UnityEngine;
 public class PushingForce : MonoBehaviour {
 
     public float forceMagnitude;
+    public bool deleteThisOnHit = false;
 
     float collisionAngle;
 
@@ -18,6 +19,10 @@ public class PushingForce : MonoBehaviour {
             delta.Normalize();
             //Set the other object's velocity equal to the force of this object and the angle between them
             other.attachedRigidbody.AddForce(delta * forceMagnitude);
+            if (deleteThisOnHit)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

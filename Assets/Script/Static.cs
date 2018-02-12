@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Static : MonoBehaviour
 {
-	 public float scrollSpeed;
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        this.gameObject.transform.Translate(Vector3.left * scrollSpeed * Time.deltaTime);
+
+        this.gameObject.transform.Translate(Vector3.left * GameObject.Find("World").GetComponent<Scrolling>().scrollSpeed * Time.deltaTime);
     }
 }
