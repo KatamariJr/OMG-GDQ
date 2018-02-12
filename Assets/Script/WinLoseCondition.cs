@@ -20,7 +20,7 @@ public class WinLoseCondition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.transform.position.x < -8f)
+		if (this.transform.position.x < -8f || this.transform.position.x > 9f)
         {
             loseGame();
         }

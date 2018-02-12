@@ -40,6 +40,7 @@ public class Scrolling : MonoBehaviour {
 
     public void init()
     {
+        scrollSpeed = 1;
         columns = new Queue<Tilemap>(18);
         columns.Enqueue(T1);
         columns.Enqueue(T2);
@@ -98,6 +99,7 @@ public class Scrolling : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         ScrollTiles();
+        scrollSpeed += (float) (Time.deltaTime * 0.05);
 	}
 
     void ScrollTiles()
