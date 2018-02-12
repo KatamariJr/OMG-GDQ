@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawnEnemies", spawnDelay, spawnDelay);
+        activeEnemies = new List<GameObject>();
     }
 
     void Update()
@@ -58,6 +59,7 @@ public class Spawner : MonoBehaviour
                 activeEnemies.Add(Instantiate(Enemy3, spawnPoint, Quaternion.identity));
                 break;
         }
+
     }
 
     public void clearEnemies()
